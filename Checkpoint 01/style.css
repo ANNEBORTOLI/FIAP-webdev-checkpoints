@@ -1,0 +1,138 @@
+:root {
+  --rosa-pastel: #f8c8dc;
+  --pessego-pastel: #ffd8be;
+  --amarelo-pastel: #fff3b0;
+  --verde-pastel: #c8e6c9;
+  --azul-pastel: #bde0fe;
+  --lilas-pastel: #d7c4f0;
+  --texto: #5a4a6b;
+  --branco-suave: #fffafc;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--texto);
+  background: linear-gradient(
+    135deg,
+    var(--azul-pastel),
+    var(--lilas-pastel) 50%,
+    var(--rosa-pastel)
+  );
+  padding: 1rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 420px;
+  background-color: var(--branco-suave);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(90, 74, 107, 0.15);
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.6rem;
+  color: var(--texto);
+  background: linear-gradient(90deg, var(--rosa-pastel), var(--lilas-pastel));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.entrada {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid var(--lilas-pastel);
+  border-radius: 12px;
+  background-color: #ffffff;
+  color: var(--texto);
+  outline: none;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+input::placeholder {
+  color: #b8a9c9;
+}
+
+input:focus {
+  border-color: var(--azul-pastel);
+  box-shadow: 0 0 0 4px rgba(189, 224, 254, 0.5);
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--texto);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition:
+    transform 0.15s,
+    filter 0.2s;
+}
+
+.btn button {
+  background-color: var(--verde-pastel);
+}
+
+.btn + div button,
+div > button {
+  background-color: var(--pessego-pastel);
+}
+
+button:hover {
+  filter: brightness(0.95);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+#resultado {
+  margin-top: 0.5rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-color: var(--amarelo-pastel);
+  border-radius: 12px;
+  min-height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

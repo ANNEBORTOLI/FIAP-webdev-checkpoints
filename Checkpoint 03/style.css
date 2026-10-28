@@ -1,0 +1,92 @@
+:root {
+  --rosa-pastel: #f8c8dc;
+  --pessego-pastel: #ffd8be;
+  --amarelo-pastel: #fff3b0;
+  --verde-pastel: #c8e6c9;
+  --azul-pastel: #bde0fe;
+  --lilas-pastel: #d7c4f0;
+  --texto: #5a4a6b;
+  --branco-suave: #fffafc;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--texto);
+  background: linear-gradient(
+    135deg,
+    var(--azul-pastel),
+    var(--lilas-pastel) 50%,
+    var(--rosa-pastel)
+  );
+  padding: 1rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  background-color: var(--branco-suave);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(90, 74, 107, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.produto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.btn {
+  font-family: inherit;
+  font-weight: 600;
+  color: var(--texto);
+  border: none;
+  cursor: pointer;
+  transition:
+    transform 0.15s,
+    filter 0.2s;
+}
+
+button:hover {
+  filter: brightness(0.95);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.btn {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 12px;
+  background-color: var(--verde-pastel);
+}
+
+.img-container {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid var(--amarelo-pastel);
+  box-shadow: 0 6px 18px rgba(90, 74, 107, 0.2);
+  background-color: var(--lilas-pastel);
+}
